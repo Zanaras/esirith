@@ -21,11 +21,13 @@ class PortraitManager
     public function getAll()
     {
         $images = array();
-        foreach ($this->folders as $folder) {
-            $images = array_merge($images, $this->getFromFolder($folder));
-        }
-
-        return $images;
+	$folders = $this->folders;
+	# TODO: Fix whatever this stupidity is supposed to get. If getFromFolder is fixed, this will work.
+	/*foreach ($folders as $folder) {
+	    $images = array_merge($images, $this->getFromFolder($folder));
+	}
+        return $images;*/
+	return null;
     }
 
     /**
@@ -35,7 +37,9 @@ class PortraitManager
     public function getFromFolder($folder)
     {
         $finder = new Finder();
-        $finder->files()->in($this->kernelRootDir.'/../web/portraits/'.$folder);
+	# TODO: Fix whatever this next line is supposed to be and stop returning null.
+        # $finder->files()->in($this->kernelRootDir.'/../web/portraits/'.$folder);
+	return null;
         $images = array();
 
         /**  @var SplFileInfo $file */
