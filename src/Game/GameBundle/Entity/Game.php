@@ -44,7 +44,7 @@ class Game
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="end", type="datetime", nullable=true)
+     * @ORM\Column(name="`end`", type="datetime", nullable=true)
      */
     private $end;
 
