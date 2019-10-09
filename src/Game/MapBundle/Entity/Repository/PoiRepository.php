@@ -45,7 +45,7 @@ class PoiRepository extends EntityRepository
             ->join('poi.map', 'map')
             ->join('map.game', 'game')
             ->where('game = :game')
-            ->andWhere('poi.startPoint = 1')
+            ->andWhere('poi.startPoint = true')
             ->setParameters(array('game' => $game));
 
         $results = $qb->getQuery()->getResult();
